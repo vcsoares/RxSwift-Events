@@ -8,15 +8,15 @@
 import Foundation
 
 struct Event: Codable, Identifiable {
+    var id: String = ""
     
-    var people: [Person]
-    var date: Date
-    var description: String
-    var image: String
-    var latitude: Double
-    var longitude: Double
-    var price: Double
-    var title: String
-    var id: String
+    var date: Date = .distantPast
+    var description: String = ""
+    var image: String = ""
+    var latitude: Double = 0
+    var longitude: Double = 0
+    var price: Double = 0
+    var title: String = ""
     
+    var people: [Person] = []
 }
