@@ -6,12 +6,16 @@ target 'sicredi-test' do
   use_frameworks!
 
   # Pods for sicredi-test
-
+  pod 'RxSwift', '6.0.0-rc.2'
+  pod 'RxCocoa', '6.0.0-rc.2'
+  
   target 'sicredi-testTests' do
     inherit! :search_paths
     # Pods for testing
     pod 'Quick'
     pod 'Nimble'
+    pod 'RxBlocking', '6.0.0-rc.2'
+    pod 'RxTest', '6.0.0-rc.2'
   end
 
   target 'sicredi-testUITests' do

@@ -196,6 +196,7 @@
 				A9F3D9462568850D000FDB88 /* Sources */,
 				A9F3D9472568850D000FDB88 /* Frameworks */,
 				A9F3D9482568850D000FDB88 /* Resources */,
+				CA213B48DDCA2E47D082C193 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,6 +235,7 @@
 				A9F3D96725688510000FDB88 /* Sources */,
 				A9F3D96825688510000FDB88 /* Frameworks */,
 				A9F3D96925688510000FDB88 /* Resources */,
+				A8A552BA7AD186FA11DDF812 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -374,6 +376,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8A552BA7AD186FA11DDF812 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sicredi-test-sicredi-testUITests/Pods-sicredi-test-sicredi-testUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sicredi-test-sicredi-testUITests/Pods-sicredi-test-sicredi-testUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sicredi-test-sicredi-testUITests/Pods-sicredi-test-sicredi-testUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA213B48DDCA2E47D082C193 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sicredi-test/Pods-sicredi-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sicredi-test/Pods-sicredi-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sicredi-test/Pods-sicredi-test-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D7839D1339C071AE7BEFC7C4 /* [CP] Check Pods Manifest.lock */ = {
