@@ -74,6 +74,38 @@ class APITests: QuickSpec {
                     }
                 }
             }
+            
+            context("WHEN someone is interested in an Event") {
+                let person = Person(name: "Teste", email: "a@b.com")
+                
+                it("THEN they should be able to checkin to it") {
+                    waitUntil(timeout: 10) { done in
+                        API.shared.fetchEvent(with: "2")
+                            .subscribe(
+                                onNext: { result in
+                                    print(result)
+                                    API.shared.checkin(user: person, to: result)
+                                        .subscribe(
+                                            onNext: { hasSucceded in
+                                                expect(hasSucceded).to(beTrue())
+                                                done()
+                                            },
+                                            onError: { error in
+                                                fail("\(error)")
+                                                done()
+                                            }
+                                        )
+                                        .disposed(by: self.disposeBag)
+                                },
+                                onError: { error in
+                                    fail("\(error)")
+                                    done()
+                                }
+                            )
+                            .disposed(by: self.disposeBag)
+                    }
+                }
+            }
         }
     }
 }
