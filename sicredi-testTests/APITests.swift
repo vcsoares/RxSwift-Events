@@ -35,6 +35,45 @@ class APITests: QuickSpec {
                     expect(events).toEventuallyNot(beEmpty(), timeout: 5)
                 }
             }
+            
+            context("WHEN information of a specific Event is requested") {
+                it("THEN an instance of that Event is eventually returned") {
+                    var event = sicredi_test.Event()
+                    
+                    API.shared.fetchEvent(with: "2")
+                        .subscribe(
+                            onNext: { result in
+                                event = result
+                                print(event)
+                            },
+                            onError: { error in
+                                fail("\(error)")
+                            }
+                        )
+                        .disposed(by: self.disposeBag)
+                    
+                    expect(event.id).toEventually(equal("2"), timeout: 5)
+                }
+            }
+            
+            context("WHEN information of a non-existant Event is requested") {
+                it("THEN the method should fail gracefully") {
+                    waitUntil(timeout: 5) { done in
+                        API.shared.fetchEvent(with: "batata")
+                            .subscribe(
+                                onNext: { result in
+                                    fail("No result expected!")
+                                    done()
+                                },
+                                onError: { error in
+                                    expect(error).to(beAKindOf(sicredi_test.API.Error.self))
+                                    done()
+                                }
+                            )
+                            .disposed(by: self.disposeBag)
+                    }
+                }
+            }
         }
     }
 }
