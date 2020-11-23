@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		89D1BD58F1B55D833325A56E /* Pods_sicredi_test_sicredi_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CA396FA7DF3A60FEDB0588 /* Pods_sicredi_test_sicredi_testUITests.framework */; };
+		A95D0610256B156100570BB8 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D060F256B156100570BB8 /* Event.swift */; };
+		A95D0618256B3A3100570BB8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D0617256B3A3100570BB8 /* Person.swift */; };
+		A95D061D256C033100570BB8 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D061C256C033100570BB8 /* ModelTests.swift */; };
 		A9F3D94E2568850D000FDB88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F3D94D2568850D000FDB88 /* AppDelegate.swift */; };
 		A9F3D9502568850D000FDB88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F3D94F2568850D000FDB88 /* SceneDelegate.swift */; };
 		A9F3D9522568850D000FDB88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F3D9512568850D000FDB88 /* ViewController.swift */; };
@@ -44,6 +47,9 @@
 		7C416C30E25D24933782CB1B /* Pods-sicredi-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sicredi-test.release.xcconfig"; path = "Target Support Files/Pods-sicredi-test/Pods-sicredi-test.release.xcconfig"; sourceTree = "<group>"; };
 		88544A23336132218CAA9E50 /* Pods-sicredi-test-sicredi-testUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sicredi-test-sicredi-testUITests.debug.xcconfig"; path = "Target Support Files/Pods-sicredi-test-sicredi-testUITests/Pods-sicredi-test-sicredi-testUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		94F996BB8202D0EFA696A8E1 /* Pods-sicredi-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sicredi-testTests.release.xcconfig"; path = "Target Support Files/Pods-sicredi-testTests/Pods-sicredi-testTests.release.xcconfig"; sourceTree = "<group>"; };
+		A95D060F256B156100570BB8 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		A95D0617256B3A3100570BB8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		A95D061C256C033100570BB8 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		A9F3D94A2568850D000FDB88 /* sicredi-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sicredi-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F3D94D2568850D000FDB88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9F3D94F2568850D000FDB88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +110,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A95D060E256B153700570BB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A95D060F256B156100570BB8 /* Event.swift */,
+				A95D0617256B3A3100570BB8 /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A9F3D9412568850D000FDB88 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +144,7 @@
 		A9F3D94C2568850D000FDB88 /* sicredi-test */ = {
 			isa = PBXGroup;
 			children = (
+				A95D060E256B153700570BB8 /* Models */,
 				A9F3D94D2568850D000FDB88 /* AppDelegate.swift */,
 				A9F3D94F2568850D000FDB88 /* SceneDelegate.swift */,
 				A9F3D9512568850D000FDB88 /* ViewController.swift */,
@@ -143,6 +159,7 @@
 		A9F3D96325688510000FDB88 /* sicredi-testTests */ = {
 			isa = PBXGroup;
 			children = (
+				A95D061C256C033100570BB8 /* ModelTests.swift */,
 				A9F3D96425688510000FDB88 /* sicredi_testTests.swift */,
 				A9F3D96625688510000FDB88 /* Info.plist */,
 			);
@@ -388,6 +405,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A95D0618256B3A3100570BB8 /* Person.swift in Sources */,
+				A95D0610256B156100570BB8 /* Event.swift in Sources */,
 				A9F3D9522568850D000FDB88 /* ViewController.swift in Sources */,
 				A9F3D94E2568850D000FDB88 /* AppDelegate.swift in Sources */,
 				A9F3D9502568850D000FDB88 /* SceneDelegate.swift in Sources */,
@@ -399,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9F3D96525688510000FDB88 /* sicredi_testTests.swift in Sources */,
+				A95D061D256C033100570BB8 /* ModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
