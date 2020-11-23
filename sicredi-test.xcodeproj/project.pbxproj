@@ -11,6 +11,8 @@
 		A95D0610256B156100570BB8 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D060F256B156100570BB8 /* Event.swift */; };
 		A95D0618256B3A3100570BB8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D0617256B3A3100570BB8 /* Person.swift */; };
 		A95D061D256C033100570BB8 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D061C256C033100570BB8 /* ModelTests.swift */; };
+		A95D0641256C5CE500570BB8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D0640256C5CE500570BB8 /* API.swift */; };
+		A95D0646256C620300570BB8 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D0645256C620300570BB8 /* APITests.swift */; };
 		A9F3D94E2568850D000FDB88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F3D94D2568850D000FDB88 /* AppDelegate.swift */; };
 		A9F3D9502568850D000FDB88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F3D94F2568850D000FDB88 /* SceneDelegate.swift */; };
 		A9F3D9522568850D000FDB88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F3D9512568850D000FDB88 /* ViewController.swift */; };
@@ -50,6 +52,8 @@
 		A95D060F256B156100570BB8 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		A95D0617256B3A3100570BB8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		A95D061C256C033100570BB8 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		A95D0640256C5CE500570BB8 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		A95D0645256C620300570BB8 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		A9F3D94A2568850D000FDB88 /* sicredi-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sicredi-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F3D94D2568850D000FDB88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9F3D94F2568850D000FDB88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A95D063C256C5A7E00570BB8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A95D0640256C5CE500570BB8 /* API.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		A9F3D9412568850D000FDB88 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +156,7 @@
 		A9F3D94C2568850D000FDB88 /* sicredi-test */ = {
 			isa = PBXGroup;
 			children = (
+				A95D063C256C5A7E00570BB8 /* Networking */,
 				A95D060E256B153700570BB8 /* Models */,
 				A9F3D94D2568850D000FDB88 /* AppDelegate.swift */,
 				A9F3D94F2568850D000FDB88 /* SceneDelegate.swift */,
@@ -159,6 +172,7 @@
 		A9F3D96325688510000FDB88 /* sicredi-testTests */ = {
 			isa = PBXGroup;
 			children = (
+				A95D0645256C620300570BB8 /* APITests.swift */,
 				A95D061C256C033100570BB8 /* ModelTests.swift */,
 				A9F3D96425688510000FDB88 /* sicredi_testTests.swift */,
 				A9F3D96625688510000FDB88 /* Info.plist */,
@@ -445,6 +459,7 @@
 				A95D0610256B156100570BB8 /* Event.swift in Sources */,
 				A9F3D9522568850D000FDB88 /* ViewController.swift in Sources */,
 				A9F3D94E2568850D000FDB88 /* AppDelegate.swift in Sources */,
+				A95D0641256C5CE500570BB8 /* API.swift in Sources */,
 				A9F3D9502568850D000FDB88 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +470,7 @@
 			files = (
 				A9F3D96525688510000FDB88 /* sicredi_testTests.swift in Sources */,
 				A95D061D256C033100570BB8 /* ModelTests.swift in Sources */,
+				A95D0646256C620300570BB8 /* APITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
