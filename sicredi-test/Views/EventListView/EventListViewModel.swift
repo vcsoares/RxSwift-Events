@@ -11,11 +11,19 @@ import RxSwift
 
 class EventListViewModel: NSObject {
     var observableEvents: Observable<[Event]>
+    enum ViewState {
+        case loading
+        case loaded
+        case error
+    }
+    
+    var state: BehaviorRelay<ViewState>
     
     private let disposeBag = DisposeBag()
     
     override init() {
         self.observableEvents = API.shared.fetchEvents()
+        self.state = BehaviorRelay(value: .loading)
         super.init()
     }
     
