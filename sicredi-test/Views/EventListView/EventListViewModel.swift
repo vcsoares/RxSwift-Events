@@ -10,32 +10,43 @@ import RxCocoa
 import RxSwift
 
 class EventListViewModel: NSObject {
-    var observableEvents: Observable<[Event]>
     enum ViewState {
         case loading
         case loaded
         case error
     }
     
+    var observableEvents: Observable<[Event]> {
+        return self.events.asObservable()
+    }
+    
     var state: BehaviorRelay<ViewState>
     
+    private var events: BehaviorRelay<[Event]>
     private let disposeBag = DisposeBag()
     
     override init() {
-        self.observableEvents = API.shared.fetchEvents()
         self.state = BehaviorRelay(value: .loading)
+        self.events = BehaviorRelay(value: [])
         super.init()
     }
     
-    func bind(tableView: UITableView) {
-        self.observableEvents
-            .bind(to: tableView.rx.items(
-                    cellIdentifier: "event-cell",
-                    cellType: UITableViewCell.self)
-            ) { (row, element, cell) in
-                cell.textLabel?.text = element.title
-                cell.detailTextLabel?.text = String(format: "R$ %.2f", element.price)
-            }
-            .disposed(by: self.disposeBag)
+    func fetchEvents() {
+        self.state.accept(.loading)
+        
+        API.shared.fetchEvents()
+            .timeout(.seconds(5), scheduler: MainScheduler.instance)
+            .subscribe(
+                onNext: { events in
+                    self.events.accept(events)
+                    self.state.accept(.loaded)
+                },
+                onError: { error in
+                    self.events.accept([])
+                    self.state.accept(.error)
+                }
+            )
+            .disposed(by: disposeBag)
     }
+    
 }

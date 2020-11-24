@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		89D1BD58F1B55D833325A56E /* Pods_sicredi_test_sicredi_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CA396FA7DF3A60FEDB0588 /* Pods_sicredi_test_sicredi_testUITests.framework */; };
+		A902B5BE256C941500931D64 /* EventDetailsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A902B5BD256C941500931D64 /* EventDetailsView.storyboard */; };
+		A902B5C3256C942100931D64 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A902B5C2256C942100931D64 /* EventDetailsViewController.swift */; };
+		A902B5C8256C942C00931D64 /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A902B5C7256C942C00931D64 /* EventDetailsViewModel.swift */; };
+		A9072481256D80EB00F010D8 /* EventListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9072480256D80EB00F010D8 /* EventListTableViewCell.swift */; };
 		A95D0610256B156100570BB8 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D060F256B156100570BB8 /* Event.swift */; };
 		A95D0618256B3A3100570BB8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D0617256B3A3100570BB8 /* Person.swift */; };
 		A95D061D256C033100570BB8 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D061C256C033100570BB8 /* ModelTests.swift */; };
@@ -52,6 +56,10 @@
 		7C416C30E25D24933782CB1B /* Pods-sicredi-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sicredi-test.release.xcconfig"; path = "Target Support Files/Pods-sicredi-test/Pods-sicredi-test.release.xcconfig"; sourceTree = "<group>"; };
 		88544A23336132218CAA9E50 /* Pods-sicredi-test-sicredi-testUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sicredi-test-sicredi-testUITests.debug.xcconfig"; path = "Target Support Files/Pods-sicredi-test-sicredi-testUITests/Pods-sicredi-test-sicredi-testUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		94F996BB8202D0EFA696A8E1 /* Pods-sicredi-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sicredi-testTests.release.xcconfig"; path = "Target Support Files/Pods-sicredi-testTests/Pods-sicredi-testTests.release.xcconfig"; sourceTree = "<group>"; };
+		A902B5BD256C941500931D64 /* EventDetailsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventDetailsView.storyboard; sourceTree = "<group>"; };
+		A902B5C2256C942100931D64 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
+		A902B5C7256C942C00931D64 /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
+		A9072480256D80EB00F010D8 /* EventListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListTableViewCell.swift; sourceTree = "<group>"; };
 		A95D060F256B156100570BB8 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		A95D0617256B3A3100570BB8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		A95D061C256C033100570BB8 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
@@ -140,6 +148,7 @@
 		A95D064D256C78B900570BB8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A95D0669256C8E5B00570BB8 /* EventDetailsView */,
 				A95D0665256C8E3700570BB8 /* EventListView */,
 			);
 			path = Views;
@@ -151,8 +160,19 @@
 				A95D064E256C7A0F00570BB8 /* EventListView.storyboard */,
 				A95D065B256C7B9D00570BB8 /* EventListViewController.swift */,
 				A95D0660256C7C2D00570BB8 /* EventListViewModel.swift */,
+				A9072480256D80EB00F010D8 /* EventListTableViewCell.swift */,
 			);
 			path = EventListView;
+			sourceTree = "<group>";
+		};
+		A95D0669256C8E5B00570BB8 /* EventDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				A902B5BD256C941500931D64 /* EventDetailsView.storyboard */,
+				A902B5C2256C942100931D64 /* EventDetailsViewController.swift */,
+				A902B5C7256C942C00931D64 /* EventDetailsViewModel.swift */,
+			);
+			path = EventDetailsView;
 			sourceTree = "<group>";
 		};
 		A9F3D9412568850D000FDB88 = {
@@ -336,6 +356,7 @@
 				A95D064F256C7A1000570BB8 /* EventListView.storyboard in Resources */,
 				A9F3D95A2568850F000FDB88 /* LaunchScreen.storyboard in Resources */,
 				A9F3D9572568850F000FDB88 /* Assets.xcassets in Resources */,
+				A902B5BE256C941500931D64 /* EventDetailsView.storyboard in Resources */,
 				A9F3D9552568850D000FDB88 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,9 +506,12 @@
 				A95D065C256C7B9D00570BB8 /* EventListViewController.swift in Sources */,
 				A95D0610256B156100570BB8 /* Event.swift in Sources */,
 				A9F3D9522568850D000FDB88 /* ViewController.swift in Sources */,
+				A902B5C8256C942C00931D64 /* EventDetailsViewModel.swift in Sources */,
 				A9F3D94E2568850D000FDB88 /* AppDelegate.swift in Sources */,
 				A95D0661256C7C2D00570BB8 /* EventListViewModel.swift in Sources */,
+				A902B5C3256C942100931D64 /* EventDetailsViewController.swift in Sources */,
 				A95D0641256C5CE500570BB8 /* API.swift in Sources */,
+				A9072481256D80EB00F010D8 /* EventListTableViewCell.swift in Sources */,
 				A9F3D9502568850D000FDB88 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
