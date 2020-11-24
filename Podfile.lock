@@ -1,4 +1,7 @@
 PODS:
+  - Kingfisher (5.15.7):
+    - Kingfisher/Core (= 5.15.7)
+  - Kingfisher/Core (5.15.7)
   - Nimble (8.1.2)
   - Quick (3.0.0)
   - RxBlocking (6.0.0-rc.2):
@@ -13,6 +16,7 @@ PODS:
     - RxSwift (= 6.0.0-rc.2)
 
 DEPENDENCIES:
+  - Kingfisher (~> 5.0)
   - Nimble
   - Quick
   - RxBlocking (= 6.0.0-rc.2)
@@ -22,6 +26,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Kingfisher
     - Nimble
     - Quick
     - RxBlocking
@@ -31,6 +36,7 @@ SPEC REPOS:
     - RxTest
 
 SPEC CHECKSUMS:
+  Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
   Nimble: 3864815b4703c7ebffba875973c70e854489fbae
   Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
   RxBlocking: 548aa3ba93a330d49c2b2e78d1b0d4d322adba49
@@ -39,6 +45,6 @@ SPEC CHECKSUMS:
   RxSwift: ada35be6643bedf6881cdbd6bbfb27aeea527670
   RxTest: 979a97b4c55e9fcb5e6b32fb86cb432a819883b4
 
-PODFILE CHECKSUM: 16b92a6c0768a49bb84f68d4ebd128ab90ac2b55
+PODFILE CHECKSUM: fe62cfe9ba021fa081612b7f349343d4c098f93c
 
 COCOAPODS: 1.10.0

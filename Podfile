@@ -8,6 +8,7 @@ target 'sicredi-test' do
   # Pods for sicredi-test
   pod 'RxSwift', '6.0.0-rc.2'
   pod 'RxCocoa', '6.0.0-rc.2'
+  pod 'Kingfisher', '~> 5.0'
   
   target 'sicredi-testTests' do
     inherit! :search_paths
