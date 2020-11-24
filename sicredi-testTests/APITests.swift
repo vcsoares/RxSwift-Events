@@ -81,21 +81,13 @@ class APITests: QuickSpec {
                 it("THEN they should be able to checkin to it") {
                     waitUntil(timeout: 10) { done in
                         API.shared.fetchEvent(with: "2")
+                            .flatMapLatest { event in
+                                API.shared.checkin(user: person, to: event)
+                            }
                             .subscribe(
-                                onNext: { result in
-                                    print(result)
-                                    API.shared.checkin(user: person, to: result)
-                                        .subscribe(
-                                            onNext: { hasSucceded in
-                                                expect(hasSucceded).to(beTrue())
-                                                done()
-                                            },
-                                            onError: { error in
-                                                fail("\(error)")
-                                                done()
-                                            }
-                                        )
-                                        .disposed(by: self.disposeBag)
+                                onNext: { hasSucceded in
+                                    expect(hasSucceded).to(beTrue())
+                                    done()
                                 },
                                 onError: { error in
                                     fail("\(error)")
