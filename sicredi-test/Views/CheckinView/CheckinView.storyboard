@@ -45,18 +45,18 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YnY-T1-pfj">
-                                <rect key="frame" x="20" y="193" width="374" height="93"/>
+                                <rect key="frame" x="20" y="193" width="374" height="84"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" adjustsFontForContentSizeCategory="YES" minimumFontSize="24" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lCM-gB-7Kj">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                         <color key="tintColor" systemColor="systemPurpleColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" adjustsFontForContentSizeCategory="YES" minimumFontSize="24" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="H0q-IS-Ehd">
-                                        <rect key="frame" x="0.0" y="54.5" width="374" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="374" height="34"/>
                                         <color key="tintColor" systemColor="systemPurpleColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                     </textField>
                                 </subviews>
@@ -69,11 +69,15 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xQ-IK-WUa">
-                                <rect key="frame" x="20" y="722" width="374" height="66"/>
+                                <rect key="frame" x="20" y="735" width="374" height="53"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="16" maxX="0.0" maxY="16"/>
+                                <size key="titleShadowOffset" width="4" height="3"/>
                                 <state key="normal" title="Confirmar Checkin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="disabled">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>

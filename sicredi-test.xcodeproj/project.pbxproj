@@ -14,6 +14,7 @@
 		A9072481256D80EB00F010D8 /* EventListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9072480256D80EB00F010D8 /* EventListTableViewCell.swift */; };
 		A93ADCCD256EF2B70067418B /* CheckinView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93ADCCC256EF2B70067418B /* CheckinView.storyboard */; };
 		A93ADCD2256EF9F00067418B /* CheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93ADCD1256EF9F00067418B /* CheckinViewController.swift */; };
+		A93ADCD7256EFA8E0067418B /* CheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93ADCD6256EFA8E0067418B /* CheckinViewModel.swift */; };
 		A95D0610256B156100570BB8 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D060F256B156100570BB8 /* Event.swift */; };
 		A95D0618256B3A3100570BB8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D0617256B3A3100570BB8 /* Person.swift */; };
 		A95D061D256C033100570BB8 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D061C256C033100570BB8 /* ModelTests.swift */; };
@@ -64,6 +65,7 @@
 		A9072480256D80EB00F010D8 /* EventListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListTableViewCell.swift; sourceTree = "<group>"; };
 		A93ADCCC256EF2B70067418B /* CheckinView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CheckinView.storyboard; sourceTree = "<group>"; };
 		A93ADCD1256EF9F00067418B /* CheckinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinViewController.swift; sourceTree = "<group>"; };
+		A93ADCD6256EFA8E0067418B /* CheckinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinViewModel.swift; sourceTree = "<group>"; };
 		A95D060F256B156100570BB8 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		A95D0617256B3A3100570BB8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		A95D061C256C033100570BB8 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				A93ADCCC256EF2B70067418B /* CheckinView.storyboard */,
 				A93ADCD1256EF9F00067418B /* CheckinViewController.swift */,
+				A93ADCD6256EFA8E0067418B /* CheckinViewModel.swift */,
 			);
 			path = CheckinView;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				A9F3D9522568850D000FDB88 /* ViewController.swift in Sources */,
 				A902B5C8256C942C00931D64 /* EventDetailsViewModel.swift in Sources */,
 				A9F3D94E2568850D000FDB88 /* AppDelegate.swift in Sources */,
+				A93ADCD7256EFA8E0067418B /* CheckinViewModel.swift in Sources */,
 				A95D0661256C7C2D00570BB8 /* EventListViewModel.swift in Sources */,
 				A902B5C3256C942100931D64 /* EventDetailsViewController.swift in Sources */,
 				A95D0641256C5CE500570BB8 /* API.swift in Sources */,
