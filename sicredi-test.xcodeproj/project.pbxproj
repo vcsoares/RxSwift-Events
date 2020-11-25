@@ -23,6 +23,7 @@
 		A95D064F256C7A1000570BB8 /* EventListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A95D064E256C7A0F00570BB8 /* EventListView.storyboard */; };
 		A95D065C256C7B9D00570BB8 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D065B256C7B9D00570BB8 /* EventListViewController.swift */; };
 		A95D0661256C7C2D00570BB8 /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95D0660256C7C2D00570BB8 /* EventListViewModel.swift */; };
+		A9D83941256F0AC900DC06B8 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D83940256F0AC900DC06B8 /* String+Extensions.swift */; };
 		A9F3D94E2568850D000FDB88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F3D94D2568850D000FDB88 /* AppDelegate.swift */; };
 		A9F3D9502568850D000FDB88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F3D94F2568850D000FDB88 /* SceneDelegate.swift */; };
 		A9F3D9522568850D000FDB88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F3D9512568850D000FDB88 /* ViewController.swift */; };
@@ -74,6 +75,7 @@
 		A95D064E256C7A0F00570BB8 /* EventListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventListView.storyboard; sourceTree = "<group>"; };
 		A95D065B256C7B9D00570BB8 /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		A95D0660256C7C2D00570BB8 /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
+		A9D83940256F0AC900DC06B8 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		A9F3D94A2568850D000FDB88 /* sicredi-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sicredi-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F3D94D2568850D000FDB88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9F3D94F2568850D000FDB88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,14 @@
 				A93ADCD6256EFA8E0067418B /* CheckinViewModel.swift */,
 			);
 			path = CheckinView;
+			sourceTree = "<group>";
+		};
+		A93ADCDB256F075B0067418B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A9D83940256F0AC900DC06B8 /* String+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A95D060E256B153700570BB8 /* Models */ = {
@@ -220,6 +230,7 @@
 				A95D060E256B153700570BB8 /* Models */,
 				A95D064D256C78B900570BB8 /* Views */,
 				A95D063C256C5A7E00570BB8 /* Networking */,
+				A93ADCDB256F075B0067418B /* Extensions */,
 				A9F3D94D2568850D000FDB88 /* AppDelegate.swift */,
 				A9F3D94F2568850D000FDB88 /* SceneDelegate.swift */,
 				A9F3D9512568850D000FDB88 /* ViewController.swift */,
@@ -528,6 +539,7 @@
 				A9F3D94E2568850D000FDB88 /* AppDelegate.swift in Sources */,
 				A93ADCD7256EFA8E0067418B /* CheckinViewModel.swift in Sources */,
 				A95D0661256C7C2D00570BB8 /* EventListViewModel.swift in Sources */,
+				A9D83941256F0AC900DC06B8 /* String+Extensions.swift in Sources */,
 				A902B5C3256C942100931D64 /* EventDetailsViewController.swift in Sources */,
 				A95D0641256C5CE500570BB8 /* API.swift in Sources */,
 				A9072481256D80EB00F010D8 /* EventListTableViewCell.swift in Sources */,

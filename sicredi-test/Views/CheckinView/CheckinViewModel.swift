@@ -40,7 +40,8 @@ class CheckinViewModel {
             guard let name = name,
                   let email = email,
                   !name.isEmpty,
-                  !email.isEmpty
+                  !email.isEmpty,
+                  email.isValidEmail
             else {
                 return false
             }
