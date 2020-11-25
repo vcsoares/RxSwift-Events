@@ -55,10 +55,21 @@ class CheckinViewController: UIViewController {
             )
             .disposed(by: disposeBag)
         
+        // Disables and dims check-in button if there are any empty
+        // textfields on-screen, or if no valid e-mail has been entered.
         viewModel.hasValidData
             .bind(to: self.checkinButton.rx.isEnabled)
             .disposed(by: disposeBag)
         
+        viewModel.hasValidData
+            .distinctUntilChanged()
+            .map { hasValidData -> CGFloat in
+                return hasValidData ? 1 : 0.5
+            }
+            .bind(to: self.checkinButton.rx.alpha)
+            .disposed(by: disposeBag)
+        
+        // Bind textfield inputs to corresponding view model attributes
         self.nameTextField.rx.text
             .distinctUntilChanged()
             .bind(to: viewModel.name)
@@ -69,6 +80,7 @@ class CheckinViewController: UIViewController {
             .bind(to: viewModel.email)
             .disposed(by: disposeBag)
         
+        // Post check-in request when check-in button has been tapped
         self.checkinButton.rx.tap
             .subscribe(
                 onNext: { viewModel.checkin() }
