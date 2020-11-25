@@ -51,6 +51,19 @@
                                     <constraint firstItem="wDe-Ju-r3v" firstAttribute="top" secondItem="u4E-0g-1Mz" secondAttribute="top" constant="20" symbolic="YES" id="zB2-Ug-Y8y"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xQ-IK-WUa">
+                                <rect key="frame" x="20" y="735" width="374" height="53"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="16" maxX="0.0" maxY="16"/>
+                                <size key="titleShadowOffset" width="4" height="3"/>
+                                <state key="normal" title="Confirmar Checkin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YnY-T1-pfj">
                                 <rect key="frame" x="20" y="193" width="374" height="84"/>
                                 <subviews>
@@ -75,19 +88,10 @@
                                     <constraint firstItem="lCM-gB-7Kj" firstAttribute="top" secondItem="YnY-T1-pfj" secondAttribute="top" id="jZS-O0-muB"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xQ-IK-WUa">
-                                <rect key="frame" x="20" y="735" width="374" height="53"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="16" maxX="0.0" maxY="16"/>
-                                <size key="titleShadowOffset" width="4" height="3"/>
-                                <state key="normal" title="Confirmar Checkin">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <state key="disabled">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Osx-9I-kiQ">
+                                <rect key="frame" x="337" y="743" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QZz-eL-fHu"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
@@ -95,7 +99,9 @@
                             <constraint firstItem="u4E-0g-1Mz" firstAttribute="top" secondItem="QZz-eL-fHu" secondAttribute="top" id="1Or-FW-QSQ"/>
                             <constraint firstItem="YnY-T1-pfj" firstAttribute="top" secondItem="u4E-0g-1Mz" secondAttribute="bottom" constant="40" id="1mv-YX-EA3"/>
                             <constraint firstItem="QZz-eL-fHu" firstAttribute="trailing" secondItem="5xQ-IK-WUa" secondAttribute="trailing" constant="20" id="C4h-4x-dnW"/>
+                            <constraint firstItem="Osx-9I-kiQ" firstAttribute="centerY" secondItem="5xQ-IK-WUa" secondAttribute="centerY" id="Dmp-P2-lAx"/>
                             <constraint firstItem="YnY-T1-pfj" firstAttribute="leading" secondItem="QZz-eL-fHu" secondAttribute="leading" constant="20" id="DtB-ho-Edp"/>
+                            <constraint firstItem="5xQ-IK-WUa" firstAttribute="trailing" secondItem="Osx-9I-kiQ" secondAttribute="trailing" constant="20" id="Emv-Su-EBk"/>
                             <constraint firstItem="u4E-0g-1Mz" firstAttribute="trailing" secondItem="QZz-eL-fHu" secondAttribute="trailing" id="L3o-wu-HaP"/>
                             <constraint firstItem="QZz-eL-fHu" firstAttribute="bottom" secondItem="5xQ-IK-WUa" secondAttribute="bottom" constant="20" id="Sqs-ox-cS2"/>
                             <constraint firstItem="u4E-0g-1Mz" firstAttribute="leading" secondItem="QZz-eL-fHu" secondAttribute="leading" id="Twy-8z-5WV"/>
@@ -105,6 +111,7 @@
                     </view>
                     <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Osx-9I-kiQ" id="ZGV-7b-lS8"/>
                         <outlet property="checkinButton" destination="5xQ-IK-WUa" id="7sv-mb-TiY"/>
                         <outlet property="closeButton" destination="8RP-DP-ysU" id="M3C-cG-c8G"/>
                         <outlet property="emailTextField" destination="H0q-IS-Ehd" id="Wql-Ik-ArB"/>

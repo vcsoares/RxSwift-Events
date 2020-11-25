@@ -15,6 +15,7 @@ class CheckinViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var checkinButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var viewModel: CheckinViewModel?
     
@@ -38,16 +39,19 @@ class CheckinViewController: UIViewController {
                 onNext: { state in
                     switch state {
                     case .presenting:
+                        self.activityIndicator.stopAnimating()
                         break
                     case .sendingRequest:
-                        // show activity indicator
+                        self.activityIndicator.startAnimating()
                         print("sending checkin request...")
                         break
                     case .success:
+                        self.activityIndicator.stopAnimating()
                         // show success alert
                         print("...done!")
                         self.dismiss(animated: true, completion: nil)
                     case .error:
+                        self.activityIndicator.stopAnimating()
                         // show error alert
                         print("something went wrong!")
                         break
