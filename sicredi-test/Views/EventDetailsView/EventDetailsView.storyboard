@@ -59,15 +59,15 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" distribution="fillProportionally" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="GK5-eO-7hr">
                                                             <rect key="frame" x="0.0" y="41.5" width="374" height="50.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Preço" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tW-cP-eX7">
-                                                                    <rect key="frame" x="0.0" y="16.5" width="70" height="18"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="R$ XX,XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tW-cP-eX7">
+                                                                    <rect key="frame" x="0.0" y="16.5" width="104.5" height="18"/>
                                                                     <color key="tintColor" systemColor="systemPurpleColor"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                                     <color key="textColor" systemColor="systemPurpleColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="255" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZF-0z-j3J">
-                                                                    <rect key="frame" x="130" y="4" width="244" height="42.5"/>
+                                                                    <rect key="frame" x="164.5" y="4" width="209.5" height="42.5"/>
                                                                     <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                                     <color key="tintColor" systemColor="systemBackgroundColor"/>
@@ -92,25 +92,26 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="U6u-ob-YmC">
-                                        <rect key="frame" x="0.0" y="375" width="414" height="300"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="U6u-ob-YmC">
+                                        <rect key="frame" x="0.0" y="375" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U6u-ob-YmC" id="taW-Ne-EM9">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mrv-g5-dMp">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="300"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Description" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vxd-1H-ryT">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="33"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Mrv-g5-dMp" firstAttribute="leading" secondItem="taW-Ne-EM9" secondAttribute="leading" constant="20" symbolic="YES" id="cnz-Xa-Vhh"/>
-                                                <constraint firstItem="Mrv-g5-dMp" firstAttribute="top" secondItem="taW-Ne-EM9" secondAttribute="top" id="cwV-oA-93m"/>
-                                                <constraint firstAttribute="bottom" secondItem="Mrv-g5-dMp" secondAttribute="bottom" id="dOh-QJ-3xR"/>
-                                                <constraint firstAttribute="trailing" secondItem="Mrv-g5-dMp" secondAttribute="trailing" constant="20" symbolic="YES" id="rmU-7V-I0g"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vxd-1H-ryT" secondAttribute="trailing" id="Gud-8i-3c7"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vxd-1H-ryT" secondAttribute="bottom" id="NQ3-pM-XZY"/>
+                                                <constraint firstItem="vxd-1H-ryT" firstAttribute="leading" secondItem="taW-Ne-EM9" secondAttribute="leadingMargin" id="eVa-PN-hCO"/>
+                                                <constraint firstItem="vxd-1H-ryT" firstAttribute="top" secondItem="taW-Ne-EM9" secondAttribute="top" id="f2w-FN-Hlc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -124,7 +125,7 @@
                     </tableView>
                     <connections>
                         <outlet property="checkinButton" destination="UZF-0z-j3J" id="N83-Bb-RYd"/>
-                        <outlet property="descriptionLabel" destination="Mrv-g5-dMp" id="I85-94-fs0"/>
+                        <outlet property="descriptionTextView" destination="vxd-1H-ryT" id="494-Jy-DEs"/>
                         <outlet property="eventImageView" destination="SEk-Cz-1gU" id="vLE-Y8-FwV"/>
                         <outlet property="eventView" destination="cWc-Ac-yyE" id="xk1-Eq-zhC"/>
                         <outlet property="priceLabel" destination="3tW-cP-eX7" id="ZII-FU-uSR"/>
@@ -145,6 +146,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

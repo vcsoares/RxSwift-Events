@@ -15,7 +15,7 @@ class EventDetailsViewController: UITableViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var eventImageView: UIImageView!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var checkinButton: UIButton!
     
     @IBOutlet weak var eventView: UITableView!
@@ -32,7 +32,7 @@ class EventDetailsViewController: UITableViewController {
         
         self.titleLabel.text = viewModel.event.title
         self.priceLabel.text = String(format: "R$ %.2f", viewModel.event.price)
-        self.descriptionLabel.text = viewModel.event.description
+        self.descriptionTextView.text = viewModel.event.description
         self.checkinButton.layer.cornerRadius = 16
         
         self.eventImageView.kf.indicatorType = .activity
