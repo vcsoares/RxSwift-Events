@@ -58,5 +58,5 @@ class EventDetailsViewController: UITableViewController {
             destination.viewModel = CheckinViewModel(with: viewModel.event)
         }
     }
-
+    
 }

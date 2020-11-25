@@ -37,11 +37,13 @@ class EventListViewController: UIViewController {
                     switch state {
                     case .loading:
                         self.activityIndicator.startAnimating()
-                    case .loaded:
+                    case .presenting:
                         self.activityIndicator.stopAnimating()
                     case .error:
                         self.activityIndicator.stopAnimating()
-                        self.presentErrorAlert()
+                        self.presentErrorAlert {
+                            self.viewModel.fetchEvents()
+                        }
                     }
                 }
             )
@@ -72,6 +74,19 @@ class EventListViewController: UIViewController {
                 API.shared.fetchEvent(with: event.id)
                     .timeout(.seconds(5), scheduler: MainScheduler.instance)
             }
+            .catch { error in
+                print(error)
+                if let selectedIndexPath = self.eventListTableView.indexPathForSelectedRow {
+                    self.eventListTableView.deselectRow(at: selectedIndexPath, animated: true)
+                }
+                
+                self.presentErrorAlert {
+                    self.viewModel.state.accept(.presenting)
+                }
+                
+                return Observable.error(error)
+            }
+            .retry()
             .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .userInitiated))
             .subscribe(
                 onNext: { event in
@@ -81,28 +96,28 @@ class EventListViewController: UIViewController {
                     }
                     self.eventListTableView.deselectRow(at: selectedIndexPath, animated: true)
                     self.performSegue(withIdentifier: "show-details", sender: event)
-                },
-                onError: { error in
-                    print(error)
-                    guard let selectedIndexPath = self.eventListTableView.indexPathForSelectedRow
-                    else {
-                        return
-                    }
-                    self.eventListTableView.deselectRow(at: selectedIndexPath, animated: true)
-                    self.presentErrorAlert()
                 }
             )
             .disposed(by: disposeBag)
     }
     
     // MARK: - Alerts
-    private func presentErrorAlert() {
+    private func presentErrorAlert(completionHandler: (() -> Void)?) {
         let alert = UIAlertController(
             title: "Algo deu errado!",
-            message: "Verifique sua conexão e tente novamente.",
+            message: nil,
             preferredStyle: .alert
         )
-        alert.addAction(.init(title: "OK", style: .default, handler: nil))
+        
+        alert.addAction(
+            UIAlertAction(
+                title: "Tentar novamente",
+                style: .default,
+                handler: { _ in
+                    completionHandler?()
+                }
+            )
+        )
         
         self.present(alert, animated: true)
     }
@@ -128,7 +143,9 @@ class EventListViewController: UIViewController {
             else {
                 // should this ever fail for whatever reason...
                 print("**** unable to present event details! ****")
-                self.presentErrorAlert()
+                self.presentErrorAlert {
+                    self.viewModel.state.accept(.presenting)
+                }
                 return false
             }
         }

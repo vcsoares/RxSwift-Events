@@ -12,7 +12,7 @@ import RxSwift
 class EventListViewModel: NSObject {
     enum ViewState {
         case loading
-        case loaded
+        case presenting
         case error
     }
     
@@ -39,7 +39,7 @@ class EventListViewModel: NSObject {
             .subscribe(
                 onNext: { events in
                     self.events.accept(events)
-                    self.state.accept(.loaded)
+                    self.state.accept(.presenting)
                 },
                 onError: { error in
                     self.events.accept([])
