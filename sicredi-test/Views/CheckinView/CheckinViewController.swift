@@ -14,6 +14,7 @@ class CheckinViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var checkinButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
     
     var viewModel: CheckinViewModel?
     
@@ -84,6 +85,13 @@ class CheckinViewController: UIViewController {
         self.checkinButton.rx.tap
             .subscribe(
                 onNext: { viewModel.checkin() }
+            )
+            .disposed(by: disposeBag)
+
+        // Dismiss modal when close button tapped
+        self.closeButton.rx.tap
+            .subscribe(
+                onNext: { self.dismiss(animated: true, completion: nil) }
             )
             .disposed(by: disposeBag)
     }

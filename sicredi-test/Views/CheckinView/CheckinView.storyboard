@@ -32,14 +32,21 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RP-DP-ysU" userLabel="Close">
+                                        <rect key="frame" x="376" y="8" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="wDe-Ju-r3v" secondAttribute="trailing" constant="20" id="B4B-fq-QUf"/>
                                     <constraint firstAttribute="trailing" secondItem="0wi-mS-ihE" secondAttribute="trailing" constant="20" id="Lky-nR-Rng"/>
+                                    <constraint firstItem="8RP-DP-ysU" firstAttribute="top" secondItem="u4E-0g-1Mz" secondAttribute="top" constant="8" id="aTB-RN-So2"/>
                                     <constraint firstItem="0wi-mS-ihE" firstAttribute="leading" secondItem="u4E-0g-1Mz" secondAttribute="leading" constant="20" id="d1n-Nd-Oh7"/>
                                     <constraint firstAttribute="bottom" secondItem="0wi-mS-ihE" secondAttribute="bottom" constant="20" symbolic="YES" id="dkG-gn-q9J"/>
                                     <constraint firstItem="wDe-Ju-r3v" firstAttribute="leading" secondItem="u4E-0g-1Mz" secondAttribute="leading" constant="20" id="f1W-xJ-QzY"/>
+                                    <constraint firstAttribute="trailing" secondItem="8RP-DP-ysU" secondAttribute="trailing" constant="8" id="qXt-4x-CIM"/>
                                     <constraint firstItem="0wi-mS-ihE" firstAttribute="top" secondItem="wDe-Ju-r3v" secondAttribute="bottom" constant="20" id="xG3-sW-BE7"/>
                                     <constraint firstItem="wDe-Ju-r3v" firstAttribute="top" secondItem="u4E-0g-1Mz" secondAttribute="top" constant="20" symbolic="YES" id="zB2-Ug-Y8y"/>
                                 </constraints>
@@ -99,6 +106,7 @@
                     <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="checkinButton" destination="5xQ-IK-WUa" id="7sv-mb-TiY"/>
+                        <outlet property="closeButton" destination="8RP-DP-ysU" id="M3C-cG-c8G"/>
                         <outlet property="emailTextField" destination="H0q-IS-Ehd" id="Wql-Ik-ArB"/>
                         <outlet property="nameTextField" destination="lCM-gB-7Kj" id="WgN-HP-QG0"/>
                     </connections>
