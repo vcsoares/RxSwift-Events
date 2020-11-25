@@ -57,8 +57,10 @@ class EventListViewController: UIViewController {
                 cell.priceLabel.text = String(format: "R$ %.2f", element.price)
                 cell.eventImageView.kf.setImage(
                     with: URL(string: element.image),
-                    placeholder: UIImage(systemName: "photo.on.rectangle.angled"),
-                    options: [ .transition(.fade(1)) ]
+                    options: [
+                        .transition(.fade(1)),
+                        .onFailureImage(UIImage(systemName: "photo.on.rectangle.angled")),
+                    ]
                 )
             }
             .disposed(by: self.disposeBag)
