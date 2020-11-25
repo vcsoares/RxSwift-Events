@@ -66,13 +66,15 @@
                                                                     <color key="textColor" systemColor="systemPurpleColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="255" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZF-0z-j3J">
+                                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="255" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZF-0z-j3J">
                                                                     <rect key="frame" x="130" y="4" width="244" height="42.5"/>
                                                                     <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                                     <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                                                    <state key="normal" title="Fazer Checkin">
-                                                                        <color key="titleColor" systemColor="systemBackgroundColor"/>
-                                                                    </state>
+                                                                    <state key="normal" title="Fazer Checkin"/>
+                                                                    <connections>
+                                                                        <segue destination="9iJ-kn-bVd" kind="presentation" identifier="show-checkin" id="GCk-ls-RHb"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <constraints>
@@ -132,6 +134,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AWl-xx-my0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="411.59420289855075" y="81.696428571428569"/>
+        </scene>
+        <!--CheckinView-->
+        <scene sceneID="H7R-xX-rjY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CheckinView" id="9iJ-kn-bVd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AYo-XP-EtM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050" y="82"/>
         </scene>
     </scenes>
     <resources>
