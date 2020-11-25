@@ -16,6 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="systemPurpleColor"/>
                         <sections>
                             <tableViewSection id="6dA-Gl-55s">
                                 <cells>
@@ -60,8 +61,9 @@
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Preço" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tW-cP-eX7">
                                                                     <rect key="frame" x="0.0" y="16.5" width="70" height="18"/>
+                                                                    <color key="tintColor" systemColor="systemPurpleColor"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                                    <color key="textColor" systemColor="systemGreenColor"/>
+                                                                    <color key="textColor" systemColor="systemPurpleColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="255" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZF-0z-j3J">
@@ -119,6 +121,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="checkinButton" destination="UZF-0z-j3J" id="N83-Bb-RYd"/>
                         <outlet property="descriptionLabel" destination="Mrv-g5-dMp" id="I85-94-fs0"/>
                         <outlet property="eventImageView" destination="SEk-Cz-1gU" id="vLE-Y8-FwV"/>
                         <outlet property="eventView" destination="cWc-Ac-yyE" id="xk1-Eq-zhC"/>
@@ -137,9 +140,6 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
