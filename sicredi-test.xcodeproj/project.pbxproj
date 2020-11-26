@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		89D1BD58F1B55D833325A56E /* Pods_sicredi_test_sicredi_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CA396FA7DF3A60FEDB0588 /* Pods_sicredi_test_sicredi_testUITests.framework */; };
 		A902B5BE256C941500931D64 /* EventDetailsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A902B5BD256C941500931D64 /* EventDetailsView.storyboard */; };
 		A902B5C3256C942100931D64 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A902B5C2256C942100931D64 /* EventDetailsViewController.swift */; };
 		A902B5C8256C942C00931D64 /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A902B5C7256C942C00931D64 /* EventDetailsViewModel.swift */; };
@@ -28,25 +27,15 @@
 		A9D8394B256F537E00DC06B8 /* UIAlert+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D8394A256F537D00DC06B8 /* UIAlert+Extensions.swift */; };
 		A9F3D94E2568850D000FDB88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F3D94D2568850D000FDB88 /* AppDelegate.swift */; };
 		A9F3D9502568850D000FDB88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F3D94F2568850D000FDB88 /* SceneDelegate.swift */; };
-		A9F3D9522568850D000FDB88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F3D9512568850D000FDB88 /* ViewController.swift */; };
 		A9F3D9552568850D000FDB88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F3D9532568850D000FDB88 /* Main.storyboard */; };
 		A9F3D9572568850F000FDB88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9F3D9562568850F000FDB88 /* Assets.xcassets */; };
 		A9F3D95A2568850F000FDB88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F3D9582568850F000FDB88 /* LaunchScreen.storyboard */; };
-		A9F3D96525688510000FDB88 /* sicredi_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F3D96425688510000FDB88 /* sicredi_testTests.swift */; };
-		A9F3D97025688510000FDB88 /* sicredi_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F3D96F25688510000FDB88 /* sicredi_testUITests.swift */; };
 		B802B4E6EB38043F24B870E7 /* Pods_sicredi_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB1BF8DEE6576E1824AC542 /* Pods_sicredi_test.framework */; };
 		F0F359915CE618284E5665C2 /* Pods_sicredi_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFCDB3B4B409BAF18E7FDB07 /* Pods_sicredi_testTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		A9F3D96125688510000FDB88 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A9F3D9422568850D000FDB88 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A9F3D9492568850D000FDB88;
-			remoteInfo = "sicredi-test";
-		};
-		A9F3D96C25688510000FDB88 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A9F3D9422568850D000FDB88 /* Project object */;
 			proxyType = 1;
@@ -83,17 +72,12 @@
 		A9F3D94A2568850D000FDB88 /* sicredi-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sicredi-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F3D94D2568850D000FDB88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9F3D94F2568850D000FDB88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A9F3D9512568850D000FDB88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A9F3D9542568850D000FDB88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9F3D9562568850F000FDB88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9F3D9592568850F000FDB88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9F3D95B2568850F000FDB88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9F3D96025688510000FDB88 /* sicredi-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sicredi-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9F3D96425688510000FDB88 /* sicredi_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sicredi_testTests.swift; sourceTree = "<group>"; };
 		A9F3D96625688510000FDB88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9F3D96B25688510000FDB88 /* sicredi-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sicredi-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9F3D96F25688510000FDB88 /* sicredi_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sicredi_testUITests.swift; sourceTree = "<group>"; };
-		A9F3D97125688510000FDB88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBCCB536D5209D554EA9B9BE /* Pods-sicredi-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sicredi-test.debug.xcconfig"; path = "Target Support Files/Pods-sicredi-test/Pods-sicredi-test.debug.xcconfig"; sourceTree = "<group>"; };
 		CFCDB3B4B409BAF18E7FDB07 /* Pods_sicredi_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sicredi_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CA396FA7DF3A60FEDB0588 /* Pods_sicredi_test_sicredi_testUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sicredi_test_sicredi_testUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,14 +97,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0F359915CE618284E5665C2 /* Pods_sicredi_testTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9F3D96825688510000FDB88 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				89D1BD58F1B55D833325A56E /* Pods_sicredi_test_sicredi_testUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +189,6 @@
 			children = (
 				A9F3D94C2568850D000FDB88 /* sicredi-test */,
 				A9F3D96325688510000FDB88 /* sicredi-testTests */,
-				A9F3D96E25688510000FDB88 /* sicredi-testUITests */,
 				A9F3D94B2568850D000FDB88 /* Products */,
 				A21B04D1905CA1CFCA38FE50 /* Pods */,
 				C88AC4DB5C56D35F9E3FD56E /* Frameworks */,
@@ -225,7 +200,6 @@
 			children = (
 				A9F3D94A2568850D000FDB88 /* sicredi-test.app */,
 				A9F3D96025688510000FDB88 /* sicredi-testTests.xctest */,
-				A9F3D96B25688510000FDB88 /* sicredi-testUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,7 +213,6 @@
 				A93ADCDB256F075B0067418B /* Extensions */,
 				A9F3D94D2568850D000FDB88 /* AppDelegate.swift */,
 				A9F3D94F2568850D000FDB88 /* SceneDelegate.swift */,
-				A9F3D9512568850D000FDB88 /* ViewController.swift */,
 				A9F3D9532568850D000FDB88 /* Main.storyboard */,
 				A9F3D9562568850F000FDB88 /* Assets.xcassets */,
 				A9F3D9582568850F000FDB88 /* LaunchScreen.storyboard */,
@@ -253,19 +226,9 @@
 			children = (
 				A95D0645256C620300570BB8 /* APITests.swift */,
 				A95D061C256C033100570BB8 /* ModelTests.swift */,
-				A9F3D96425688510000FDB88 /* sicredi_testTests.swift */,
 				A9F3D96625688510000FDB88 /* Info.plist */,
 			);
 			path = "sicredi-testTests";
-			sourceTree = "<group>";
-		};
-		A9F3D96E25688510000FDB88 /* sicredi-testUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A9F3D96F25688510000FDB88 /* sicredi_testUITests.swift */,
-				A9F3D97125688510000FDB88 /* Info.plist */,
-			);
-			path = "sicredi-testUITests";
 			sourceTree = "<group>";
 		};
 		C88AC4DB5C56D35F9E3FD56E /* Frameworks */ = {
@@ -320,26 +283,6 @@
 			productReference = A9F3D96025688510000FDB88 /* sicredi-testTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A9F3D96A25688510000FDB88 /* sicredi-testUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A9F3D97A25688510000FDB88 /* Build configuration list for PBXNativeTarget "sicredi-testUITests" */;
-			buildPhases = (
-				A51AAB617B88E81E17460BD4 /* [CP] Check Pods Manifest.lock */,
-				A9F3D96725688510000FDB88 /* Sources */,
-				A9F3D96825688510000FDB88 /* Frameworks */,
-				A9F3D96925688510000FDB88 /* Resources */,
-				A8A552BA7AD186FA11DDF812 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A9F3D96D25688510000FDB88 /* PBXTargetDependency */,
-			);
-			name = "sicredi-testUITests";
-			productName = "sicredi-testUITests";
-			productReference = A9F3D96B25688510000FDB88 /* sicredi-testUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -353,10 +296,6 @@
 						CreatedOnToolsVersion = 12.2;
 					};
 					A9F3D95F25688510000FDB88 = {
-						CreatedOnToolsVersion = 12.2;
-						TestTargetID = A9F3D9492568850D000FDB88;
-					};
-					A9F3D96A25688510000FDB88 = {
 						CreatedOnToolsVersion = 12.2;
 						TestTargetID = A9F3D9492568850D000FDB88;
 					};
@@ -377,7 +316,6 @@
 			targets = (
 				A9F3D9492568850D000FDB88 /* sicredi-test */,
 				A9F3D95F25688510000FDB88 /* sicredi-testTests */,
-				A9F3D96A25688510000FDB88 /* sicredi-testUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -397,13 +335,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A9F3D95E25688510000FDB88 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9F3D96925688510000FDB88 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -450,45 +381,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A51AAB617B88E81E17460BD4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-sicredi-test-sicredi-testUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A8A552BA7AD186FA11DDF812 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-sicredi-test-sicredi-testUITests/Pods-sicredi-test-sicredi-testUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-sicredi-test-sicredi-testUITests/Pods-sicredi-test-sicredi-testUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sicredi-test-sicredi-testUITests/Pods-sicredi-test-sicredi-testUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CA213B48DDCA2E47D082C193 /* [CP] Embed Pods Frameworks */ = {
@@ -540,7 +432,6 @@
 				A95D0618256B3A3100570BB8 /* Person.swift in Sources */,
 				A95D065C256C7B9D00570BB8 /* EventListViewController.swift in Sources */,
 				A95D0610256B156100570BB8 /* Event.swift in Sources */,
-				A9F3D9522568850D000FDB88 /* ViewController.swift in Sources */,
 				A9D8394B256F537E00DC06B8 /* UIAlert+Extensions.swift in Sources */,
 				A902B5C8256C942C00931D64 /* EventDetailsViewModel.swift in Sources */,
 				A9F3D94E2568850D000FDB88 /* AppDelegate.swift in Sources */,
@@ -560,17 +451,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9F3D96525688510000FDB88 /* sicredi_testTests.swift in Sources */,
 				A95D061D256C033100570BB8 /* ModelTests.swift in Sources */,
 				A95D0646256C620300570BB8 /* APITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9F3D96725688510000FDB88 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A9F3D97025688510000FDB88 /* sicredi_testUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,11 +463,6 @@
 			isa = PBXTargetDependency;
 			target = A9F3D9492568850D000FDB88 /* sicredi-test */;
 			targetProxy = A9F3D96125688510000FDB88 /* PBXContainerItemProxy */;
-		};
-		A9F3D96D25688510000FDB88 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A9F3D9492568850D000FDB88 /* sicredi-test */;
-			targetProxy = A9F3D96C25688510000FDB88 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -813,48 +690,6 @@
 			};
 			name = Release;
 		};
-		A9F3D97B25688510000FDB88 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88544A23336132218CAA9E50 /* Pods-sicredi-test-sicredi-testUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VWQ6K2W3PY;
-				INFOPLIST_FILE = "sicredi-testUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.sicredi-testUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "sicredi-test";
-			};
-			name = Debug;
-		};
-		A9F3D97C25688510000FDB88 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A749A22389936B2B4C6B93F /* Pods-sicredi-test-sicredi-testUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VWQ6K2W3PY;
-				INFOPLIST_FILE = "sicredi-testUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.sicredi-testUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "sicredi-test";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -881,15 +716,6 @@
 			buildConfigurations = (
 				A9F3D97825688510000FDB88 /* Debug */,
 				A9F3D97925688510000FDB88 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A9F3D97A25688510000FDB88 /* Build configuration list for PBXNativeTarget "sicredi-testUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A9F3D97B25688510000FDB88 /* Debug */,
-				A9F3D97C25688510000FDB88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

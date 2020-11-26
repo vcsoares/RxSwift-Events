@@ -38,16 +38,6 @@
                ReferencedContainer = "container:sicredi-test.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A9F3D96A25688510000FDB88"
-               BuildableName = "sicredi-testUITests.xctest"
-               BlueprintName = "sicredi-testUITests"
-               ReferencedContainer = "container:sicredi-test.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
