@@ -130,7 +130,8 @@ final class API {
                     
                     let results = try decoder.decode([String : String].self, from: data)
                     
-                    if results["code"] == "200" {
+                    if let code = results["code"],
+                       (200...399).contains(Int(code) ?? 0) {
                         return true
                     } else {
                         return false
