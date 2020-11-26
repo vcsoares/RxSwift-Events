@@ -54,11 +54,12 @@ class EventListViewController: UIViewController {
             .bind(to: eventListTableView.rx.items(
                     cellIdentifier: "event-cell",
                     cellType: EventListTableViewCell.self)
-            ) { (row, element, cell) in
-                cell.titleLabel.text = element.title
-                cell.priceLabel.text = String(format: "R$ %.2f", element.price)
+            ) { (row, event, cell) in
+                cell.titleLabel.text = event.title
+                cell.dateLabel.text = event.date.shortDateString
+                cell.priceLabel.text = String.priceString(from: event.price)
                 cell.eventImageView.kf.setImage(
-                    with: URL(string: element.image),
+                    with: URL(string: event.image),
                     options: [
                         .transition(.fade(1)),
                         .onFailureImage(UIImage(systemName: "photo.on.rectangle.angled")),

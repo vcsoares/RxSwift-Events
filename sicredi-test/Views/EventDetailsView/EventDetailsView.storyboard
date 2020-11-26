@@ -50,7 +50,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VF5-If-9pc">
                                                     <rect key="frame" x="20" y="10" width="374" height="92"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="260" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lSb-MV-JOm">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="260" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lSb-MV-JOm">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="33.5"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                             <nil key="textColor"/>
@@ -59,15 +59,27 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" distribution="fillProportionally" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="GK5-eO-7hr">
                                                             <rect key="frame" x="0.0" y="41.5" width="374" height="50.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="R$ XX,XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tW-cP-eX7">
-                                                                    <rect key="frame" x="0.0" y="16.5" width="104.5" height="18"/>
-                                                                    <color key="tintColor" systemColor="systemPurpleColor"/>
-                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                                    <color key="textColor" systemColor="systemPurpleColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ujx-WM-DSd">
+                                                                    <rect key="frame" x="0.0" y="4" width="145" height="42.5"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="00/00/00 00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJ0-sM-2Li" userLabel="Date Label">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="145" height="18"/>
+                                                                            <color key="tintColor" systemColor="systemPurpleColor"/>
+                                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="R$ XX,XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tW-cP-eX7">
+                                                                            <rect key="frame" x="0.0" y="22" width="145" height="20.5"/>
+                                                                            <color key="tintColor" systemColor="systemPurpleColor"/>
+                                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                            <color key="textColor" systemColor="systemPurpleColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
                                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="255" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZF-0z-j3J">
-                                                                    <rect key="frame" x="164.5" y="4" width="209.5" height="42.5"/>
+                                                                    <rect key="frame" x="205" y="4" width="169" height="42.5"/>
                                                                     <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                                     <color key="tintColor" systemColor="systemBackgroundColor"/>
@@ -132,7 +144,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBw-mu-0AR">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                                             <subviews>
-                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Address" translatesAutoresizingMaskIntoConstraints="NO" id="1NO-yg-5Ll">
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Address" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1NO-yg-5Ll">
                                                                     <rect key="frame" x="20" y="0.0" width="374" height="60"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     <color key="textColor" systemColor="secondaryLabelColor"/>
@@ -190,6 +202,7 @@
                     <connections>
                         <outlet property="addressTextView" destination="1NO-yg-5Ll" id="eoz-J6-EJg"/>
                         <outlet property="checkinButton" destination="UZF-0z-j3J" id="N83-Bb-RYd"/>
+                        <outlet property="dateLabel" destination="JJ0-sM-2Li" id="xNB-PS-98j"/>
                         <outlet property="descriptionTextView" destination="vxd-1H-ryT" id="494-Jy-DEs"/>
                         <outlet property="eventImageView" destination="SEk-Cz-1gU" id="vLE-Y8-FwV"/>
                         <outlet property="eventView" destination="cWc-Ac-yyE" id="xk1-Eq-zhC"/>

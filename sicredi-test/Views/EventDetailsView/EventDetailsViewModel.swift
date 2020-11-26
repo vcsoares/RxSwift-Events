@@ -22,7 +22,7 @@ class EventDetailsViewModel {
         return [
             "👇😉 Quero te convidar para esse evento!",
             event.title.uppercased(),
-            "Dia \(event.date.formattedString)"
+            "Dia \(event.date.shortDateTimeString)"
         ]
     }
 

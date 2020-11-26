@@ -14,6 +14,7 @@ import RxSwift
 class EventDetailsViewController: UITableViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var descriptionTextView: UITextView!
@@ -34,6 +35,7 @@ class EventDetailsViewController: UITableViewController {
         }
         
         self.titleLabel.text = viewModel.event.title
+        self.dateLabel.text = viewModel.event.date.shortDateTimeString
         self.priceLabel.text = String(format: "R$ %.2f", viewModel.event.price)
         self.descriptionTextView.text = viewModel.event.description
         self.checkinButton.layer.cornerRadius = 16

@@ -45,28 +45,42 @@
                                                             </constraints>
                                                             <imageReference key="image" image="photo.on.rectangle.angled" catalog="system" symbolScale="small"/>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="TRS-uV-kt1">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="TRS-uV-kt1">
                                                             <rect key="frame" x="106" y="0.0" width="197" height="96"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hJ-QP-y8d">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="197" height="46.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="197" height="51.5"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNb-S8-SaC">
-                                                                    <rect key="frame" x="0.0" y="50.5" width="197" height="45.5"/>
-                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNb-S8-SaC">
+                                                                    <rect key="frame" x="0.0" y="55.5" width="197" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                                     <color key="textColor" systemColor="systemPurpleColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="256" text="00/00/00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lv6-fp-E7d" userLabel="Date Label">
+                                                                    <rect key="frame" x="0.0" y="80" width="197" height="16"/>
+                                                                    <color key="tintColor" systemColor="systemPurpleColor"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7aM-Pb-FhZ">
+                                                                    <rect key="frame" x="0.0" y="75" width="197" height="21"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </stackView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="rNb-S8-SaC" firstAttribute="leading" secondItem="TRS-uV-kt1" secondAttribute="leading" id="gnx-bX-jp2"/>
                                                                 <constraint firstItem="9hJ-QP-y8d" firstAttribute="leading" secondItem="TRS-uV-kt1" secondAttribute="leading" id="jN4-uE-WNK"/>
                                                                 <constraint firstAttribute="trailing" secondItem="9hJ-QP-y8d" secondAttribute="trailing" id="jOe-eH-3as"/>
-                                                                <constraint firstAttribute="trailing" secondItem="rNb-S8-SaC" secondAttribute="trailing" id="q4P-r8-Tuc"/>
                                                             </constraints>
+                                                            <variation key="default">
+                                                                <mask key="subviews">
+                                                                    <exclude reference="7aM-Pb-FhZ"/>
+                                                                </mask>
+                                                            </variation>
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
@@ -81,6 +95,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateLabel" destination="lv6-fp-E7d" id="FB8-Ac-pGr"/>
                                             <outlet property="eventImageView" destination="VTB-Cs-QeY" id="G1x-JK-J3a"/>
                                             <outlet property="priceLabel" destination="rNb-S8-SaC" id="Doe-7j-6BL"/>
                                             <outlet property="titleLabel" destination="9hJ-QP-y8d" id="8yh-oG-7BG"/>
@@ -122,6 +137,9 @@
     </scenes>
     <resources>
         <image name="photo.on.rectangle.angled" catalog="system" width="128" height="101"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
