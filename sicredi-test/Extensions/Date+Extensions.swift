@@ -9,9 +9,13 @@ import Foundation
 
 extension Date {
     
-    // Syntax candy for retrieving a short, formatted string from a date
-    var formattedString: String {
+    // Syntax candy for retrieving short, formatted strings from a date
+    var shortDateTimeString: String {
         return DateFormatter.localizedString(from: self, dateStyle: .short, timeStyle: .short)
+    }
+    
+    var shortDateString: String {
+        return DateFormatter.localizedString(from: self, dateStyle: .short, timeStyle: .none)
     }
     
 }
