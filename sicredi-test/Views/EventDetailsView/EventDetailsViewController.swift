@@ -95,4 +95,5 @@ class EventDetailsViewController: UITableViewController {
             view.tintColor = .white
         }
     }
+    
 }

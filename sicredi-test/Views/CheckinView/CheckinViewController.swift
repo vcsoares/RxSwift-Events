@@ -29,12 +29,13 @@ class CheckinViewController: UIViewController {
         self.bindComponents()
     }
 
+    // MARK: - Component binding
     private func bindComponents() {
         guard let viewModel = self.viewModel else {
             return
         }
         
-        viewModel.viewState
+        viewModel.state
             .subscribe(
                 onNext: { state in
                     switch state {
@@ -43,17 +44,19 @@ class CheckinViewController: UIViewController {
                         break
                     case .sendingRequest:
                         self.activityIndicator.startAnimating()
-                        print("sending checkin request...")
                         break
                     case .success:
                         self.activityIndicator.stopAnimating()
-                        // show success alert
-                        print("...done!")
-                        self.dismiss(animated: true, completion: nil)
+                        let alert = UIAlertController.message("Checkin realizado! 🥳")
+                        self.present(alert, animated: true)
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                            alert.dismiss(animated: true, completion: nil)
+                            self.dismiss(animated: true, completion: nil)
+                        }
                     case .error:
                         self.activityIndicator.stopAnimating()
-                        // show error alert
-                        print("something went wrong!")
+                        self.present(UIAlertController.errorAlert(completionHandler: nil), animated: true)
                         break
                     }
                 }
@@ -99,4 +102,5 @@ class CheckinViewController: UIViewController {
             )
             .disposed(by: disposeBag)
     }
+    
 }

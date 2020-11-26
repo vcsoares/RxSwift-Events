@@ -21,12 +21,12 @@ class CheckinViewModel {
     var email = BehaviorRelay<String?>(value: nil)
     
     var hasValidData: Observable<Bool>
-    var viewState: Observable<ViewState> {
-        return state.asObservable().distinctUntilChanged()
+    var state: Observable<ViewState> {
+        return stateRelay.asObservable().distinctUntilChanged()
     }
     
     private let event: Event
-    private let state = BehaviorRelay<ViewState>(value: .presenting)
+    private let stateRelay = BehaviorRelay<ViewState>(value: .presenting)
     private let disposeBag = DisposeBag()
     
     init(with event: Event) {
@@ -53,28 +53,29 @@ class CheckinViewModel {
     func checkin() {
         guard let name = self.name.value,
               let email = self.email.value else {
-            self.state.accept(.error)
+            self.stateRelay.accept(.error)
             return
         }
         
-        self.state.accept(.sendingRequest)
+        self.stateRelay.accept(.sendingRequest)
         
         let person = Person(name: name, email: email)
         
         API.shared.checkin(user: person, to: event)
+            .timeout(.seconds(5), scheduler: MainScheduler.instance)
             .subscribe(
                 onNext: { hasSucceeded in
                     if hasSucceeded {
-                        self.state.accept(.success)
+                        self.stateRelay.accept(.success)
                     } else {
                         // it is possible for the HTTP request to succeed
                         // but the JSON response return an error code
-                        self.state.accept(.error)
+                        self.stateRelay.accept(.error)
                     }
                 },
                 onError: { error in
                     print(error)
-                    self.state.accept(.error)
+                    self.stateRelay.accept(.error)
                 }
             )
             .disposed(by: self.disposeBag)
