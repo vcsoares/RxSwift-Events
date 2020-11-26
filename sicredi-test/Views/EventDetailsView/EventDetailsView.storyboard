@@ -179,6 +179,14 @@
                             <outlet property="delegate" destination="LzD-aO-fDo" id="Ow5-Xs-5vV"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Detalhes" id="B2l-fh-nfx">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="action" id="gof-bo-EKc">
+                            <connections>
+                                <action selector="didPressShareButton:" destination="LzD-aO-fDo" id="rlG-aW-PVM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="addressTextView" destination="1NO-yg-5Ll" id="eoz-J6-EJg"/>
                         <outlet property="checkinButton" destination="UZF-0z-j3J" id="N83-Bb-RYd"/>

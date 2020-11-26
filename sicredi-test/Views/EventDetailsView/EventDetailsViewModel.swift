@@ -13,7 +13,18 @@ import RxSwift
 
 class EventDetailsViewModel {
     var event: Event
-    var location: CLLocationCoordinate2D
+    
+    var location: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: event.latitude, longitude: event.longitude)
+    }
+    
+    var shareItems: [Any] {
+        return [
+            "👇😉 Quero te convidar para esse evento!",
+            event.title.uppercased(),
+            "Dia \(event.date.formattedString)"
+        ]
+    }
 
     var address: Observable<String> {
         return addressRelay.asObservable().distinctUntilChanged()
@@ -23,7 +34,6 @@ class EventDetailsViewModel {
     
     init(with event: Event) {
         self.event = event
-        self.location = CLLocationCoordinate2D(latitude: event.latitude, longitude: event.longitude)
         self.fetchEventLocation()
     }
     

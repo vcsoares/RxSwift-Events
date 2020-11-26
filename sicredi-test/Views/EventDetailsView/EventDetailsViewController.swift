@@ -74,6 +74,19 @@ class EventDetailsViewController: UITableViewController {
         }
     }
     
+    @IBAction func didPressShareButton(_ sender: Any) {
+        guard let viewModel = self.viewModel else {
+            return
+        }
+        
+        let shareSheet = UIActivityViewController(
+            activityItems: viewModel.shareItems,
+            applicationActivities: nil
+        )
+        
+        self.present(shareSheet, animated: true, completion: nil)
+    }
+    
     // MARK: - Styling
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if let view = view as? UITableViewHeaderFooterView {
