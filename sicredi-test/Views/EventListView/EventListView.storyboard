@@ -87,14 +87,20 @@
                                                         <constraint firstItem="TRS-uV-kt1" firstAttribute="leading" secondItem="VTB-Cs-QeY" secondAttribute="trailing" constant="10" id="4G1-Ge-XYS"/>
                                                     </constraints>
                                                 </stackView>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Ifz-Ha-a5C" userLabel="Cell Activity Indicator">
+                                                    <rect key="frame" x="315" y="54" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="45g-jp-9RL" secondAttribute="trailing" constant="20" id="23p-5t-xmi"/>
+                                                <constraint firstItem="Ifz-Ha-a5C" firstAttribute="trailing" secondItem="HpE-mF-Vhm" secondAttribute="trailingMargin" id="4u1-ub-xBn"/>
                                                 <constraint firstItem="45g-jp-9RL" firstAttribute="centerY" secondItem="HpE-mF-Vhm" secondAttribute="centerY" id="59I-YT-INy"/>
+                                                <constraint firstItem="Ifz-Ha-a5C" firstAttribute="centerY" secondItem="HpE-mF-Vhm" secondAttribute="centerY" id="iOd-PI-Q2j"/>
                                                 <constraint firstItem="45g-jp-9RL" firstAttribute="leading" secondItem="HpE-mF-Vhm" secondAttribute="leading" constant="20" id="qFA-Mm-Qha"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="activityIndicator" destination="Ifz-Ha-a5C" id="Qsm-hh-6cN"/>
                                             <outlet property="dateLabel" destination="lv6-fp-E7d" id="FB8-Ac-pGr"/>
                                             <outlet property="eventImageView" destination="VTB-Cs-QeY" id="G1x-JK-J3a"/>
                                             <outlet property="priceLabel" destination="rNb-S8-SaC" id="Doe-7j-6BL"/>
