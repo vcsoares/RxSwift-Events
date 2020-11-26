@@ -41,9 +41,10 @@ class EventListViewController: UIViewController {
                         self.activityIndicator.stopAnimating()
                     case .error:
                         self.activityIndicator.stopAnimating()
-                        self.presentErrorAlert {
-                            self.viewModel.fetchEvents()
-                        }
+                        self.present(
+                            UIAlertController.errorAlert {  self.viewModel.fetchEvents() },
+                            animated: true
+                        )
                     }
                 }
             )
@@ -81,9 +82,10 @@ class EventListViewController: UIViewController {
                     self.eventListTableView.deselectRow(at: selectedIndexPath, animated: true)
                 }
                 
-                self.presentErrorAlert {
-                    self.viewModel.state.accept(.presenting)
-                }
+                self.present(
+                    UIAlertController.errorAlert {  self.viewModel.state.accept(.presenting) },
+                    animated: true
+                )
                 
                 return Observable.error(error)
             }
@@ -100,27 +102,6 @@ class EventListViewController: UIViewController {
                 }
             )
             .disposed(by: disposeBag)
-    }
-    
-    // MARK: - Alerts
-    private func presentErrorAlert(completionHandler: (() -> Void)?) {
-        let alert = UIAlertController(
-            title: "Algo deu errado!",
-            message: nil,
-            preferredStyle: .alert
-        )
-        
-        alert.addAction(
-            UIAlertAction(
-                title: "Tentar novamente",
-                style: .default,
-                handler: { _ in
-                    completionHandler?()
-                }
-            )
-        )
-        
-        self.present(alert, animated: true)
     }
     
     // MARK: - Navigation
@@ -144,15 +125,17 @@ class EventListViewController: UIViewController {
             else {
                 // should this ever fail for whatever reason...
                 print("**** unable to present event details! ****")
-                self.presentErrorAlert {
-                    self.viewModel.state.accept(.presenting)
-                }
+                self.present(
+                    UIAlertController.errorAlert {  self.viewModel.state.accept(.presenting) },
+                    animated: true
+                )
                 return false
             }
         }
         
         return true
     }
+    
 }
 
 // MARK: - UITableViewDelegate extensions
