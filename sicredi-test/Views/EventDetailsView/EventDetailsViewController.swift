@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 import Kingfisher
 import RxCocoa
 import RxSwift
@@ -17,6 +18,8 @@ class EventDetailsViewController: UITableViewController {
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var checkinButton: UIButton!
+    @IBOutlet weak var locationMapView: MKMapView!
+    @IBOutlet weak var addressTextView: UITextView!
     
     @IBOutlet weak var eventView: UITableView!
         
@@ -43,10 +46,22 @@ class EventDetailsViewController: UITableViewController {
                 .onFailureImage(UIImage(systemName: "photo.on.rectangle.angled"))
             ]
         )
+        
+        let annotation = MKPlacemark(coordinate: viewModel.location)
+        let region = MKCoordinateRegion(
+            center: viewModel.location,
+            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        )
+        
+        self.locationMapView.addAnnotation(annotation)
+        self.locationMapView.setRegion(region, animated: true)
+
+        viewModel.address
+            .bind(to: self.addressTextView.rx.text)
+            .disposed(by: disposeBag)
     }
 
     // MARK: - Navigation
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "show-checkin" {
             guard let destination = segue.destination as? CheckinViewController,
@@ -59,4 +74,10 @@ class EventDetailsViewController: UITableViewController {
         }
     }
     
+    // MARK: - Styling
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let view = view as? UITableViewHeaderFooterView {
+            view.tintColor = .white
+        }
+    }
 }

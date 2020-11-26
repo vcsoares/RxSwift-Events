@@ -50,7 +50,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VF5-If-9pc">
                                                     <rect key="frame" x="20" y="10" width="374" height="92"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="260" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lSb-MV-JOm">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="260" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lSb-MV-JOm">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="33.5"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                             <nil key="textColor"/>
@@ -117,6 +117,62 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Localização" id="ync-TM-O8O">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="B1G-ar-WFe">
+                                        <rect key="frame" x="0.0" y="475" width="414" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B1G-ar-WFe" id="D6H-00-zLG">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LnD-qI-DNu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBw-mu-0AR">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                                            <subviews>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Address" translatesAutoresizingMaskIntoConstraints="NO" id="1NO-yg-5Ll">
+                                                                    <rect key="frame" x="20" y="0.0" width="374" height="60"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="location"/>
+                                                                    <dataDetectorType key="dataDetectorTypes" address="YES"/>
+                                                                </textView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="1NO-yg-5Ll" firstAttribute="leading" secondItem="oBw-mu-0AR" secondAttribute="leading" constant="20" id="9Jg-b9-21s"/>
+                                                                <constraint firstAttribute="bottom" secondItem="1NO-yg-5Ll" secondAttribute="bottom" id="PqR-8Y-Hk1"/>
+                                                                <constraint firstAttribute="trailing" secondItem="1NO-yg-5Ll" secondAttribute="trailing" constant="20" id="fI7-lJ-ave"/>
+                                                                <constraint firstItem="1NO-yg-5Ll" firstAttribute="top" secondItem="oBw-mu-0AR" secondAttribute="top" id="rIp-3Z-VSR"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G2s-o6-AcV">
+                                                            <rect key="frame" x="0.0" y="60" width="414" height="240"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="240" id="QB4-0d-V8g"/>
+                                                            </constraints>
+                                                        </mapView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="oBw-mu-0AR" secondAttribute="trailing" id="6pN-mn-AeO"/>
+                                                        <constraint firstItem="oBw-mu-0AR" firstAttribute="top" secondItem="LnD-qI-DNu" secondAttribute="top" id="oaq-Ty-itD"/>
+                                                        <constraint firstItem="oBw-mu-0AR" firstAttribute="leading" secondItem="LnD-qI-DNu" secondAttribute="leading" id="wA3-uR-lVB"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="LnD-qI-DNu" secondAttribute="trailing" id="HR3-rq-Fnn"/>
+                                                <constraint firstAttribute="bottom" secondItem="LnD-qI-DNu" secondAttribute="bottom" id="cWZ-yR-bDr"/>
+                                                <constraint firstItem="LnD-qI-DNu" firstAttribute="leading" secondItem="D6H-00-zLG" secondAttribute="leading" id="ikg-T9-bWu"/>
+                                                <constraint firstItem="LnD-qI-DNu" firstAttribute="top" secondItem="D6H-00-zLG" secondAttribute="top" id="lPR-uG-FeB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="LzD-aO-fDo" id="9Rb-f8-I0R"/>
@@ -124,10 +180,12 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="addressTextView" destination="1NO-yg-5Ll" id="eoz-J6-EJg"/>
                         <outlet property="checkinButton" destination="UZF-0z-j3J" id="N83-Bb-RYd"/>
                         <outlet property="descriptionTextView" destination="vxd-1H-ryT" id="494-Jy-DEs"/>
                         <outlet property="eventImageView" destination="SEk-Cz-1gU" id="vLE-Y8-FwV"/>
                         <outlet property="eventView" destination="cWc-Ac-yyE" id="xk1-Eq-zhC"/>
+                        <outlet property="locationMapView" destination="G2s-o6-AcV" id="Plm-Q8-Dhy"/>
                         <outlet property="priceLabel" destination="3tW-cP-eX7" id="ZII-FU-uSR"/>
                         <outlet property="titleLabel" destination="lSb-MV-JOm" id="A0N-ng-Fu2"/>
                     </connections>
