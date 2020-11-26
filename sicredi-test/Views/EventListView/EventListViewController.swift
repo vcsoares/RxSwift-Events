@@ -63,7 +63,7 @@ class EventListViewController: UIViewController {
                     with: URL(string: event.image),
                     options: [
                         .transition(.fade(1)),
-                        .onFailureImage(UIImage(systemName: "photo.on.rectangle.angled")),
+                        .onFailureImage(UIImage(systemName: "photo.on.rectangle")),
                     ]
                 )
             }

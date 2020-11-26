@@ -36,7 +36,7 @@ class EventDetailsViewController: UITableViewController {
         
         self.titleLabel.text = viewModel.event.title
         self.dateLabel.text = viewModel.event.date.shortDateTimeString
-        self.priceLabel.text = String(format: "R$ %.2f", viewModel.event.price)
+        self.priceLabel.text = String.priceString(from: viewModel.event.price)
         self.descriptionTextView.text = viewModel.event.description
         self.checkinButton.layer.cornerRadius = 16
         
@@ -45,7 +45,7 @@ class EventDetailsViewController: UITableViewController {
             with: URL(string: viewModel.event.image),
             options: [
                 .transition(.fade(1)),
-                .onFailureImage(UIImage(systemName: "photo.on.rectangle.angled"))
+                .onFailureImage(UIImage(systemName: "photo.on.rectangle"))
             ]
         )
         

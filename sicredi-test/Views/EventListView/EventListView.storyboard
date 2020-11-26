@@ -36,14 +36,14 @@
                                                     <rect key="frame" x="20" y="16" width="303" height="96"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="VTB-Cs-QeY">
-                                                            <rect key="frame" x="0.0" y="1" width="96" height="93"/>
+                                                            <rect key="frame" x="0.0" y="2" width="96" height="92"/>
                                                             <color key="tintColor" systemColor="systemGray5Color"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="96" id="92S-vz-YIy"/>
                                                                 <constraint firstAttribute="width" constant="96" id="Mbe-F7-if0"/>
                                                                 <constraint firstAttribute="width" secondItem="VTB-Cs-QeY" secondAttribute="height" multiplier="1:1" id="Mzo-CH-6YD"/>
                                                             </constraints>
-                                                            <imageReference key="image" image="photo.on.rectangle.angled" catalog="system" symbolScale="small"/>
+                                                            <imageReference key="image" image="photo.on.rectangle" catalog="system" symbolScale="small"/>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="TRS-uV-kt1">
                                                             <rect key="frame" x="106" y="0.0" width="197" height="96"/>
@@ -67,20 +67,11 @@
                                                                     <color key="textColor" systemColor="secondaryLabelColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7aM-Pb-FhZ">
-                                                                    <rect key="frame" x="0.0" y="75" width="197" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                </stackView>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="9hJ-QP-y8d" firstAttribute="leading" secondItem="TRS-uV-kt1" secondAttribute="leading" id="jN4-uE-WNK"/>
                                                                 <constraint firstAttribute="trailing" secondItem="9hJ-QP-y8d" secondAttribute="trailing" id="jOe-eH-3as"/>
                                                             </constraints>
-                                                            <variation key="default">
-                                                                <mask key="subviews">
-                                                                    <exclude reference="7aM-Pb-FhZ"/>
-                                                                </mask>
-                                                            </variation>
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
@@ -142,7 +133,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="photo.on.rectangle.angled" catalog="system" width="128" height="101"/>
+        <image name="photo.on.rectangle" catalog="system" width="128" height="96"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
