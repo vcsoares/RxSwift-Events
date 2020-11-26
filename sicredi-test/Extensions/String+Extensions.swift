@@ -25,4 +25,8 @@ extension String {
         return regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: count)) != nil
     }
     
+    static func priceString(from value: Double) -> String {
+        return NumberFormatter.localizedString(from: NSNumber(value: value), number: .currency)
+    }
+    
 }
